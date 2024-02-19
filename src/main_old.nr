@@ -3,6 +3,7 @@ contract EasyPrivateVoting {
         protocol_types::{abis::function_selector::FunctionSelector, address::AztecAddress},
         context::{PrivateContext, Context}, state_vars::{map::Map, public_state::PublicState}
     };
+    
     struct Storage {
         admin: PublicState<AztecAddress>, // admin can end vote
         tally: Map<Field, PublicState<Field>>, // we will store candidate as key and number of votes as value
